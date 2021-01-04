@@ -1,0 +1,1185 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Camille Belmin">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Last week I submitted my first article as part of my PhD. This paper was written in R markdown and is fully reproducible. It means that a single document contains all the manuscript but also all the code for the analysis and figure generation.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/posts/reproducible-paper-writing/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/posts/reproducible-paper-writing/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="">
+  <meta property="og:url" content="/posts/reproducible-paper-writing/">
+  <meta property="og:title" content="Wanted: a perfect reproducible paper workflow | ">
+  <meta property="og:description" content="Last week I submitted my first article as part of my PhD. This paper was written in R markdown and is fully reproducible. It means that a single document contains all the manuscript but also all the code for the analysis and figure generation."><meta property="og:image" content="/posts/reproducible-paper-writing/featured.png">
+  <meta property="twitter:image" content="/posts/reproducible-paper-writing/featured.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-09-16T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-09-16T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Wanted: a perfect reproducible paper workflow | </title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class=" ">
+
+  
+  
+  
+    <script>window.staDarkLightChooser = true;</script>
+  
+  
+    <script>const isSiteThemeDark = false;</script>
+  
+  
+  <script src="/js/load-theme.js"></script>
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-center" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/about/"><span>About</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/posts/"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/post/"><span>Post</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Wanted: a perfect reproducible paper workflow</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Sep 16, 2020
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Last week I submitted my first article as part of my PhD. This paper was written in R markdown and is fully reproducible. It means that a single document contains all the manuscript but also all the code for the analysis and figure generation. All the pre-processings are also reproducible and the code is available on my gitlab. I am pretty happy to contribute to reproducible science, and I hope that my code is user-friendly enough to enable other people using it. Truth is, it was not the most straightforward way to write the paper, and consumed a lot of time. It does not mean it wasn&rsquo;t worth it, and that I would not do it again. However, I would like to improve this reproducible workflow and learn from other people&rsquo;s experience. That is why I am writing this short post to talk about the workflow we adopted and the challenges associated with this workflow, and start to think about how we could do differently in the future.</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-a-caption">
+
+
+  <a data-fancybox="" href="/posts/reproducible-paper-writing/work_flow_hu8ea7987b935409877cde913ed55f48ce_38245_2000x2000_fit_lanczos_2.png" data-caption="A caption">
+
+
+  <img data-src="/posts/reproducible-paper-writing/work_flow_hu8ea7987b935409877cde913ed55f48ce_38245_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="663" height="426">
+</a>
+
+
+  
+  
+  <figcaption>
+    A caption
+  </figcaption>
+
+
+</figure>
+
+<h2 id="what-is-the-workflow-we-adopted">What is the workflow we adopted?</h2>
+<!--The tools used to write a quantitative paper depend on your co-author taste and familiarity with available tools. The best workflow for you is not necessarily the best for your colleagues, and the other way around. One has to adapt and find a common ground. When all the authors on your paper are not very familiar or confortable with writing in R markdown, or when you value track changes as part of the workflow, making a fully reproducible paper might not be the most efficient way to write a paper.   
+
+, but or when you value track changes as part of the learning process of writing, making a reproducible manuscript is probably not the most efficient way to write a paper. --> 
+<p>On the figure above, I schematized the workflow we adopted for writing this paper. First, we iterated only on a word document (step 1) to be able to track the changes made by my co-authors. This allowed to have my sentences corrected and to improve my writing. After the draft was relatively mature, I created a R markdown (Rmd) file using the text we had come up with, together with all the code for the analysis and figure generation (step 2). From this point, the internal reviewing process worked as follows: I knited the Rmd to Word (step 3), then my co-authors would successively add changes and comment the draft (step 4). When they were all done, I then manually included their changes back in the Rmd file, mostly by overusing the <em>Ctrl + C</em> and <em>Ctrl + V</em> commands (step 3). This was very time consuming. For each edit: I spotted the edit in word, copied the sentence, then I searched the exact location of the corresponding text in R markdown (Screenshot below), then paste it there. Then, in order not to loose track of the changes I already had included, I accepted the changes in the word document.</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-a-caption">
+
+
+  <a data-fancybox="" href="/posts/reproducible-paper-writing/screenshot_rmd_word_arrow_huce1a307108e97ef5d355ce5c263d7173_797802_2000x2000_fit_lanczos_2.png" data-caption="A caption">
+
+
+  <img data-src="/posts/reproducible-paper-writing/screenshot_rmd_word_arrow_huce1a307108e97ef5d355ce5c263d7173_797802_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1537" height="777">
+</a>
+
+
+  
+  
+  <figcaption>
+    A caption
+  </figcaption>
+
+
+</figure>
+
+<p>I repeated that for each changes, and for each the rounds of review (i.e. a lot of times, and a lot of headaches). Ugh..</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-a-caption">
+
+
+  <a data-fancybox="" href="/posts/reproducible-paper-writing/letsdoitagain_hu16fbb3eb9bac90a91a8413fecd9da511_983848_2000x2000_fit_lanczos.gif" data-caption="A caption">
+
+
+  <img data-src="/posts/reproducible-paper-writing/letsdoitagain_hu16fbb3eb9bac90a91a8413fecd9da511_983848_2000x2000_fit_lanczos.gif" class="lazyload" alt="" width="480" height="270">
+</a>
+
+
+  
+  
+  <figcaption>
+    A caption
+  </figcaption>
+
+
+</figure>
+
+<p>It was probably not the most intelligent/efficient way of proceeding, but once launched in the process, it was just easier to continue like this.</p>
+<h2 id="what-are-alternative-workflows">What are alternative workflows?</h2>
+<ul>
+<li>
+<p>If track change is an absolute necessity (I tend to think so), I think the most obvious alternative is to use Word for the whole process, and to switch to R markdown <em>at the end</em>. However, it is hard to know when is actually going to be the last round of edit and getting used to the Rmakdown-word process (steps 3-4) can take some time. If the paper needs to be submitted before a deadline, this could become quite stressful.</p>
+</li>
+<li>
+<p>Another solution is that co-authors add changes directly on the Rmd. This requires that all co-authors are confortable with navigating in a Rmd document, with potentially a lot of code chunks. Even then, it would have been difficult to keep track of changes (unless committing to a git repository and visualizing the difference between two files, but this seems like an overly complicated process)</p>
+</li>
+<li>
+<p>Using one Word document to write the paper, and have a separate Rmd file containing all the analysis and figure generation in a Rmd file. Then, whenever the numbers/tables/figures in the text needed to be updated, I would include them manually in the Word file.</p>
+</li>
+<li>
+<p>I am aware that some R packages are being developed like redoc and reviewer. Unfortunately, the development of the former has now been suspended. Regarding reviewer, I have not tried it. My feeling is that people reluctant to using R or R markdown would have difficulty engaging with the method they propose. If you have a good experience with it, let me know!</p>
+</li>
+<li>
+<p>I find that all of these workflow are imperfect. If you have alternative solutions, please let me know!</p>
+</li>
+</ul>
+<h2 id="bottom-line">Bottom line</h2>
+<p>The tools used to write a reproducible quantitative paper depend on your co-authors' respective tastes and their familiarity with available tools. The best workflow for you is not necessarily the best for your colleagues, and the other way around. One has to adapt and find a common ground, and also probably experience different workflows to see what fits best, under which circumstan  ces. I am still looking for the perfect reproducible workflow, given the constrains that most of my colleagues are not necessarily familiar with writing in R markdown, and that I value track changes as part of the writing process.</p>
+<p><strong>What about you?</strong> I would be interested to hear about experience from people who have written reproducible papers. What was your workflow? Was it efficient? What were your constraints? Would you recommend it? Please share your story :)</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/posts/reproducible-paper-writing/&amp;text=Wanted:%20a%20perfect%20reproducible%20paper%20workflow" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/posts/reproducible-paper-writing/&amp;t=Wanted:%20a%20perfect%20reproducible%20paper%20workflow" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Wanted:%20a%20perfect%20reproducible%20paper%20workflow&amp;body=/posts/reproducible-paper-writing/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/posts/reproducible-paper-writing/&amp;title=Wanted:%20a%20perfect%20reproducible%20paper%20workflow" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Wanted:%20a%20perfect%20reproducible%20paper%20workflow%20/posts/reproducible-paper-writing/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/posts/reproducible-paper-writing/&amp;title=Wanted:%20a%20perfect%20reproducible%20paper%20workflow" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+    
+    
+    
+      
+    
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/author/camille-belmin/avatar_hu81fbc06e9f1ee7acbb8c4a1f55dbfe10_79963_270x270_fill_q75_lanczos_center.jpg" alt="Camille Belmin">
+      
+
+      <div class="media-body">
+        <h5 class="card-title"><a href="/">Camille Belmin</a></h5>
+        <h6 class="card-subtitle">PhD Candidate</h6>
+        <p class="card-text">I am a PhD candidate at PIK. My research interests include distributed robotics, mobile computing and programmable matter.</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/about/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/BelminCamille" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://gitlab.pik-potsdam.de/belmin" target="_blank" rel="noopener">
+        <i class="fab fa-gitlab"></i>
+      </a>
+    </li>
+  
+</ul>
+
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+<div class="article-widget">
+  
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/posts/i-made-a-blog/" rel="next">I made a blog</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/posts/writing-technical-content/" rel="prev">Writing technical content in Academic</a>
+  </div>
+  
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.8/mermaid.min.js" integrity="sha256-lyWCDMnMeZiXRi7Zl54sZGKYmgQs4izcT7+tKc+KUBk=" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js" integrity="sha512-7t8APmYpzEsZP7CYoA7RfMPV9Bb+PJHa9x2WiUnDXZx3XHveuyWUtvNOexhkierl5flZ3tr92dP1mMS+SGlD+A==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.3b2b658c61ebd725bd5fc606c89fe44c.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Published with
+    <a href="https://wowchemy.com" target="_blank" rel="noopener">Wowchemy Website Builder</a>
+    
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
