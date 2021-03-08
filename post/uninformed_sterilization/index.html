@@ -608,7 +608,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    4 min read
+    5 min read
   </span>
   
 
@@ -687,14 +687,14 @@
 
 </figure>
 
-<p>&ldquo;Reproductive rights&rdquo; are the rights of individuals to decide whether to reproduce and have reproductive health. They are fundamental human rights, yet far from being achieved at the global level. Although men may also suffer from a lack of reproductive rights, women are the ones mostly being denied this fundamental right by patriarchal systems of oppression, at institutional, community and private levels. According to data from 57 countries across the world, about 45% of women globally are not able to say no to sex, decide on their own health care or decide on their contraception. Forced sterilization is a particularly outrageous violation to people&rsquo;s reproductive rights. It consist in women being operated without knowing the purpose of the operation. They were told, for example, that they needed to be operated form the appendix (Verges), as doctors where removing their wombs or ligaturing their Fallopian tube. Yes, just like dogs. Forced sterilizations were often organized by an official institution, to control the reproduction of women, often women of color, poor or disabled women. As a women I find no words to describe what I feel when I hear those stories. It makes me want to investigate more about this and start an effort of collecting comprehensive information about these horrific crimes. However, to my knowledge no comprehensive global database exist on forced sterilization, which makes it, in my view a 
+<p>&ldquo;Reproductive rights&rdquo; are the rights of individuals to decide whether to reproduce and have reproductive health. They are fundamental human rights, yet far from being achieved at the global level. Although men may also suffer from a lack of reproductive rights, women are the ones mostly being denied this fundamental right by patriarchal systems of oppression, at institutional, community and private levels. According to data from 57 countries across the world, about 45% of women globally are not able to say no to sex, decide on their own health care or decide on their contraception [1]. Forced sterilization is a particularly outrageous violation to women&rsquo;s reproductive rights. It consist in women being operated without knowing the purpose of the operation. They were told, for example, that they needed to be operated from the appendix [2], as doctors where removing their wombs or ligaturing their Fallopian tube. Yes, just like dogs. Forced sterilizations were often organized by an official institution, to control the reproduction of women, often women of color, poor or disabled women. As a women I find no words to describe what I feel when I hear those stories. It makes me want to investigate more about this and start an effort of collecting comprehensive information about these horrific crimes. However, to my knowledge no comprehensive global database exist on forced sterilization, which makes it, in my view a 
 <a href="https://github.com/MimiOnuoha/missing-datasets" target="_blank" rel="noopener">&ldquo;missing dataset&rdquo;</a>.</p>
 <p>Forced sterilization are often said to be something from the past, something that neo-Malthusian were obsessed about in the 1970s to reduce the &ldquo;population problem&rdquo;, or something that Nazis undertook in the 1930s. However, this is something that has still happened recently, 
 <a href="https://www.theguardian.com/us-news/2020/jun/30/california-prisons-forced-sterilizations-belly-beast" target="_blank" rel="noopener">even in a country like the US</a>. Who knows how often this is still happening? I wanted to know more&hellip;</p>
 <p>The 
-<a href="https://dhsprogram.com/" target="_blank" rel="noopener">DHS data</a> is a marvelous source of data about demography and health. They are harmonized across countries and waves, which makes them easily comparable across countries. In addition, the samples are nationally (and sub-nationally) representative for the population. I recently found out that they collected data about sterilization. More specifically, they collected the information, for women who had been sterilized, whether the woman had been told that the operation meant no more children. In my opinion it sounds terrible enough to be called forced sterilization, but we are going to call it &ldquo;uninformed sterilization&rdquo;.</p>
+<a href="https://dhsprogram.com/" target="_blank" rel="noopener">DHS data</a> is a wonderful source of data about demography and health. They are harmonized across countries and waves, which makes them easily comparable across countries. In addition, the samples are nationally (and sub-nationally) representative for the population. I recently found out that they collected data about sterilization. More specifically, they collected the information, for women who had been sterilized, whether the woman had been told that the operation meant no more children. In my opinion it sounds terrible enough to be called forced sterilization, but we are going to call it &ldquo;uninformed sterilization&rdquo;.</p>
 <p>Therefore, I calculated the share of women, in each available countries, that had been through &ldquo;uninformed sterilization&rdquo;. For those who may wonder, I used DHS weights to re-store the representativity of the sample. The code to calculate the data is available on this git [to come].
-Once I had this indicator,, namely the share of women that had gone through &ldquo;uninformed sterilization&rdquo; for each survey, I averaged over countries to obtain only one value per country. For information, the survey waves used were from 2000 to 2010. I then divided the values into quintiles to map it on a world map below. You can scroll through the map to find to actual value of the indicator.</p>
+Once I had this indicator, namely the share of women that had gone through &ldquo;uninformed sterilization&rdquo; for each survey, I meaned over countries to obtain only one value per country. For information, I only used surveys from 2000 to 2010. I then divided the values into quintiles to map it on a world map below.</p>
 
 
 
@@ -718,21 +718,27 @@ Once I had this indicator,, namely the share of women that had gone through &ldq
 
 
 
-<figure >
+<figure id="figure-women-that-have-gone-through-uninformed-sterilization-per-10000-women-in-40-countries-data-from-2000-to-2010-from-dhs-samples">
 
 
-  <a data-fancybox="" href="/post/uninformed_sterilization/map_steri_hudda652b5efa90c749c0fe03e9119fb4e_289834_2000x2000_fit_lanczos_2.png" >
+  <a data-fancybox="" href="/post/uninformed_sterilization/map_steri_hu90b76655018234ea35fe8f1d3b979b77_259162_2000x2000_fit_lanczos_2.png" data-caption="Women that have gone through uninformed sterilization (per 10,000 women), in 40 countries, data from 2000 to 2010 from DHS samples">
 
 
-  <img data-src="/post/uninformed_sterilization/map_steri_hudda652b5efa90c749c0fe03e9119fb4e_289834_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="2100" height="2100">
+  <img data-src="/post/uninformed_sterilization/map_steri_hu90b76655018234ea35fe8f1d3b979b77_259162_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="2100" height="2100">
 </a>
 
+
+  
+  
+  <figcaption>
+    Women that have gone through uninformed sterilization (per 10,000 women), in 40 countries, data from 2000 to 2010 from DHS samples
+  </figcaption>
 
 
 </figure>
 
-<p>We can see that &ldquo;uninformed sterilization&rdquo; are quite common in India, Bangladesh, Colombia, Nicaragua, Honduras (all above 15 women per 10,000). But when were these women sterilized? As the DHS data&rsquo;s samples are women aged from 15 to 49, to sterilization may have occurred long ago (does not make it less scandalous though). To have an estimation of the year in which these women were sterilized, I used the age at which they were sterilized (it was an age group), their age at the time of the survey, and the survey year to compute the estimated sterilization year.
-I then plotted the number of women, from these surveys, who had been sterilized, per year. I think one should not analyze the trend, as the trends highly depends on many things (the age structure of each population, the survey years, the sterilization rate over time etc). But this plot, shows, most importantly, that uninformed sterilization were still happening recently.</p>
+<p>We can see that &ldquo;uninformed sterilization&rdquo; are quite common in India, Bangladesh, Colombia, Nicaragua, Honduras (all above 15 women per 10,000). But when were these women sterilized? As the DHS data&rsquo;s samples are women aged from 15 to 49, the sterilization may have occurred long ago (which does not make it less scandalous though). To have an estimation of the year in which these women were sterilized, I used the age at which they were sterilized (it was an age group), their age at the time of the survey, and the survey year to compute the estimated sterilization year.
+I then plotted the number of women, from these surveys, who had been sterilized, per year. I think one should not analyze the trend, as the trends highly depends on many things the simple analysis cannot control for (the age structure of each population, the survey years, the sterilization rate over time etc). But this plot shows, most importantly, that uninformed sterilization were still happening recently.</p>
 
 
 
@@ -756,15 +762,21 @@ I then plotted the number of women, from these surveys, who had been sterilized,
 
 
 
-<figure >
+<figure id="figure-number-of-women-who-have-been-sterilized-without-being-told-it-meant-no-children-per-year-in-41-countries-from-dhs-samples">
 
 
-  <a data-fancybox="" href="/post/uninformed_sterilization/steri_years_hud5a4d9f64460587b6ffc71de0c0cdbda_92400_2000x2000_fit_lanczos_2.png" >
+  <a data-fancybox="" href="/post/uninformed_sterilization/steri_years_huef492ba52185a5cc480199cba8d65daf_58011_2000x2000_fit_lanczos_2.png" data-caption="Number of women who have been sterilized without being told it meant no children, per year, in 41 countries, from DHS samples">
 
 
-  <img data-src="/post/uninformed_sterilization/steri_years_hud5a4d9f64460587b6ffc71de0c0cdbda_92400_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="2362" height="2100">
+  <img data-src="/post/uninformed_sterilization/steri_years_huef492ba52185a5cc480199cba8d65daf_58011_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="2362" height="2100">
 </a>
 
+
+  
+  
+  <figcaption>
+    Number of women who have been sterilized without being told it meant no children, per year, in 41 countries, from DHS samples
+  </figcaption>
 
 
 </figure>
@@ -772,8 +784,23 @@ I then plotted the number of women, from these surveys, who had been sterilized,
 <p>There is still a lot to be investigated in this data. Who were these women? From which ethnical, religious or socio-economic background were they? What was their level of education? What age were they when they were sterilized?
 How to use best this data to show the world that reproductive rights are being widely violated, still today?</p>
 <p>Contact me if you feel inspired  ☺️</p>
+<p>If you want to know more:</p>
+<ul>
+<li>Forced sterilization in the US: 
+<a href="https://www.ssjlab.org/" target="_blank" rel="noopener">Sterilization and Social Justice Lab</a></li>
+<li>Wikipedia page is a broad introduction into the general numbers: <a href="https://en.wikipedia.org/wiki/Compulsory_sterilization">https://en.wikipedia.org/wiki/Compulsory_sterilization</a></li>
+</ul>
 <hr>
-<p>Disclaimer: I just want to warn that the quality of these data may not be amazing. Why? Although the DHS data allows to calculate nationally representative indicators, these uninformed sterilization are in some countries a relatively rare phenomenon. And the rarer the phenomenon, the more data should be collected to obtain a consistent estimation. But this is what we have. And in any case, it shows uninformed sterilization exists, still today, and it is outrageous.</p>
+<p>Disclaimer: I would like to make a discalimer that the quality of these data may not be amazing. Why? Although the DHS data allows to calculate nationally representative indicators, these uninformed sterilization are in some countries a relatively rare phenomenon. And the rarer the phenomenon, the more data should be collected to obtain a consistent estimation. But this is what we have. And in any case, it shows uninformed sterilization exists, still today, and this is outrageous.</p>
+<p>References:</p>
+<ul>
+<li>
+<p>[1] United Nations, Sustainable Development Goals Report 2020. <a href="https://unstats.un.org/sdgs/report/2020/">https://unstats.un.org/sdgs/report/2020/</a></p>
+</li>
+<li>
+<p>[2] Francoise Verges, Le Ventre des femmes: Capitalisme racialisation féminisme. Paris, Albin Michel, series: « Bibliothèque Idées », 2017</p>
+</li>
+</ul>
 
     </div>
 
