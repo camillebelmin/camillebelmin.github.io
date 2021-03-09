@@ -89,10 +89,10 @@ Once I had this indicator, namely the share of women that had gone through &amp;
 
 
 
-&lt;figure id=&#34;figure-women-that-have-gone-through-uninformed-sterilization-per-10000-women-in-40-countries-data-from-2000-to-2010-from-dhs-samples&#34;&gt;
+&lt;figure id=&#34;figure-women-that-have-gone-through-uninformed-sterilization-per-1000-women-in-40-countries-data-from-2000-to-2010-from-dhs-samples&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://camillebelmin.github.io/post/uninformed_sterilization/map_steri_hubd4ec4a6f886bd2d5c72e5df82deaad1_257748_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Women that have gone through uninformed sterilization (per 10,000 women), in 40 countries, data from 2000 to 2010 from DHS samples&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://camillebelmin.github.io/post/uninformed_sterilization/map_steri_hubd4ec4a6f886bd2d5c72e5df82deaad1_257748_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Women that have gone through uninformed sterilization (per 1000 women), in 40 countries, data from 2000 to 2010 from DHS samples&#34;&gt;
 
 
   &lt;img data-src=&#34;https://camillebelmin.github.io/post/uninformed_sterilization/map_steri_hubd4ec4a6f886bd2d5c72e5df82deaad1_257748_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2100&#34; height=&#34;1181&#34;&gt;
@@ -102,13 +102,13 @@ Once I had this indicator, namely the share of women that had gone through &amp;
   
   
   &lt;figcaption&gt;
-    Women that have gone through uninformed sterilization (per 10,000 women), in 40 countries, data from 2000 to 2010 from DHS samples
+    Women that have gone through uninformed sterilization (per 1000 women), in 40 countries, data from 2000 to 2010 from DHS samples
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 
-&lt;p&gt;We can see that &amp;ldquo;uninformed sterilization&amp;rdquo; are quite common in India, Bangladesh, Colombia, Nicaragua, Honduras (all above 15 women per 10,000). But when were these women sterilized? Forced sterilization are often said to be something from the past, something that neo-Malthusian were obsessed about in the 1970s, in order to alleviate the &amp;ldquo;population problem&amp;rdquo;, or something that Nazis undertook in the 1930s. However, this is something that has still happened recently, 
+&lt;p&gt;We can see that &amp;ldquo;uninformed sterilization&amp;rdquo; are quite common in India, Bangladesh, Colombia, Nicaragua, Honduras (all above 15 women per 1000). But when were these women sterilized? Forced sterilization are often said to be something from the past, something that neo-Malthusian were obsessed about in the 1970s, in order to alleviate the &amp;ldquo;population problem&amp;rdquo;, or something that Nazis undertook in the 1930s. However, this is something that has still happened recently, 
 &lt;a href=&#34;https://www.theguardian.com/us-news/2020/jun/30/california-prisons-forced-sterilizations-belly-beast&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;even in a country like the US&lt;/a&gt;. I wanted to explore this in this data, in the case of uninformed sterilizations. As the DHS data&amp;rsquo;s samples are women aged from 15 to 49, these sterilizations above may have occurred long ago (which does not make it less scandalous though). To have an estimation of the year in which these women were sterilized, I used the age at which they were sterilized (it was an age group), their age at the time of the survey, and the survey year to compute the estimated sterilization year.
 I then plotted the number of women, from these surveys, who had been sterilized, per year. I think one should not analyze the trend, as the trends highly depends on many things the simple analysis cannot control for (the age structure of each population, the survey years, the sterilization rate over time etc). But this plot shows, most importantly, that uninformed sterilization were still happening recently.&lt;/p&gt;
 
@@ -160,10 +160,10 @@ How to use best this data to show the world that reproductive rights are being w
 &lt;ul&gt;
 &lt;li&gt;Forced sterilization in the US: 
 &lt;a href=&#34;https://www.ssjlab.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sterilization and Social Justice Lab&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Wikipedia page is a broad introduction into the general numbers: &lt;a href=&#34;https://en.wikipedia.org/wiki/Compulsory_sterilization&#34;&gt;https://en.wikipedia.org/wiki/Compulsory_sterilization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The Wikipedia page provides a good overview of the topic: &lt;a href=&#34;https://en.wikipedia.org/wiki/Compulsory_sterilization&#34;&gt;https://en.wikipedia.org/wiki/Compulsory_sterilization&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;Disclaimer: I would like to make a disclaimer that the estimates may hold a relatively high uncertainty, especially for countries with low rates. Why? Although the DHS data allows to calculate nationally representative indicators, these uninformed sterilization are in some countries a relatively rare phenomenon. And the rarer the phenomenon, the more data should be collected to obtain a consistent estimation. But this is what we have. And in any case, it shows uninformed sterilization exists, still today, and this is outrageous.&lt;/p&gt;
+&lt;p&gt;Disclaimer: The estimates may hold a relatively high uncertainty, especially for countries with low rates. Why? Although the DHS data allows to calculate nationally representative indicators, these uninformed sterilization are in some countries a relatively rare phenomenon. And the rarer the phenomenon, the more data should be collected to obtain a consistent estimation. But this is what we have. And in any case, it shows uninformed sterilization exists, still today, and this is outrageous.&lt;/p&gt;
 &lt;p&gt;References:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
