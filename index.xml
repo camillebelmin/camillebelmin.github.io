@@ -17,7 +17,7 @@
       <link>https://camillebelmin.github.io/post/vulva_plots/</link>
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
       <guid>https://camillebelmin.github.io/post/vulva_plots/</guid>
-      <description>&lt;p&gt;As much as I enjoy crunching data and coding, spending my day in front of my R session can be frustrating sometimes, especially since I love to use my hands on crafts. I found a solution to embody my data to something tangible. I embroided one of the plots from 
+      <description>&lt;p&gt;As much as I enjoy crunching data and coding, spending my day in front of my R session can be frustrating sometimes, especially since I love to use my hands on crafts. I found a solution to embody my data into something tangible. I embroidered one of the plots from 
 &lt;a href=&#34;https://camillebelmin.github.io/publications/fertility_paper/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my first PhD paper&lt;/a&gt;. I did this because I noticed that when changing the colors of my plot to pink and red, the violin plots transformed into beautiful vulva plots. I found this particularly relevant to illustrate my paper on reproductive choice and fertility.&lt;/p&gt;
 &lt;p&gt;The plot from the paper looks like this:&lt;/p&gt;
 
@@ -62,8 +62,8 @@
 
 &lt;/figure&gt;
 
-&lt;p&gt;This plot represents the total fertility rate in 403 subnational regions in 42 countries, in four groups (or quartiles) of regions: (1) regions whose population have lower than 14.8% access to electricity, (2) 48% (3) 82.4% and (4) 100%. We can see that in regions with high percentage of people having access to electricity, the total fertility rate (~ average number of children per women) is much lower. For those who wonder, we tried to show in 
-&lt;a href=&#34;https://www.nature.com/articles/s41893-021-00830-3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this paper&lt;/a&gt; that this is more than just a simple correlation. Basically access to electricity and modern fuels for cooking improves the well-being of women, saves time, inproves health and access to information. These factors enable women to make better reproductive choices, which tends to lead to fertility decline.&lt;/p&gt;
+&lt;p&gt;This plot represents the total fertility rate in 403 subnational regions in 42 countries, in four groups (or quartiles) of regions: (1) regions in which the percentage of people having access to electricity is 14.8% or lower, (2) 48% (3) 82.4% and (4) 100%. We can see that in regions with a high percentage of people having access to electricity, the total fertility rate (~average number of children per women) is much lower. For those who wonder, we tried to show in 
+&lt;a href=&#34;https://www.nature.com/articles/s41893-021-00830-3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this paper&lt;/a&gt; that this is more than just a simple correlation. Basically access to electricity and modern fuels for cooking improves the well-being of women, saves time on household cores (the burden of which is overwhelmingly carried by women), improves health and access to information. These factors enable women to make better reproductive choices, which tends to lead to fertility decline.&lt;/p&gt;
 &lt;p&gt;Now, the vulva version looks like this:&lt;/p&gt;
 
 
@@ -107,7 +107,7 @@
 
 &lt;/figure&gt;
 
-&lt;p&gt;This plots was so beautiful that I decided to embroide them. In addition to looking pretty good, it also enables me to take a step further the relation with women on this paper, as embroidery tends to be a craft mostly done by women. Nothing essentialist here. Surely the fact that women tend to do embroidery is a product of genderization. But in any case, I love embroidery and it connects me to my powerful grandmother. I am sure she would be proud.&lt;/p&gt;
+&lt;p&gt;This plots was so beautiful that I decided to embroider them. In addition to looking pretty good, it also enables me to take a step further the relation with women on this paper, as embroidery tends to be a craft mostly done by women. Nothing essentialist here. Surely the fact that women tend to do embroidery more than men is a product of genderization. But in any case, I love embroidery and it connects me to my powerful grandmother. I am sure she would be proud.&lt;/p&gt;
 
 
 
@@ -150,7 +150,7 @@
 
 &lt;/figure&gt;
 
-&lt;p&gt;I also like the back of the piece, showing the process and the trial and errors (on the right I filled the back of one of the violin until I realized this was unnecessary and wasted thread.). Some of it looks like a scripture from an antique language.&lt;/p&gt;
+&lt;p&gt;I also like the back of the piece, showing the process and the trial and errors (e.g. on the right I filled the back of one of the violin until I realized this was unnecessary and wasted thread). Some of it looks like the writings of an ancient language.&lt;/p&gt;
 
 
 
@@ -236,6 +236,7 @@
 &lt;/figure&gt;
 
 &lt;p&gt;How does the back of a R ggplot looks like?&lt;/p&gt;
+&lt;hr&gt;
 &lt;p&gt;PS: the code to reproduce the figure is on my gitlab 
 &lt;a href=&#34;https://gitlab.pik-potsdam.de/belmin/fertility-transition-powered-by-womens-access-to-electricity-and-modern-cooking-fuels/-/blob/main/2_manuscript/manuscript.Rmd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; &amp;gt; and go to &amp;ldquo;Plot of energy quartiles, generation&amp;rdquo;.&lt;/p&gt;
 &lt;hr&gt;
