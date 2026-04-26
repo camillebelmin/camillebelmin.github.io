@@ -1,94 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://camillebelmin.github.io/</loc>
-    <lastmod>2022-01-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
   </url>
-  
   <url>
-    <loc>https://camillebelmin.github.io/post/vulva_plots/</loc>
-    <lastmod>2022-01-18T00:00:00+00:00</lastmod>
+    <loc>https://camillebelmin.github.io/ecoslay.html</loc>
+    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
   </url>
-  
   <url>
-    <loc>https://camillebelmin.github.io/post/</loc>
-    <lastmod>2022-01-18T00:00:00+00:00</lastmod>
+    <loc>https://camillebelmin.github.io/publications.html</loc>
+    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
   </url>
-  
   <url>
-    <loc>https://camillebelmin.github.io/publications/dataset_livwell/</loc>
-    <lastmod>2022-01-05T00:00:00+00:00</lastmod>
+    <loc>https://camillebelmin.github.io/portfolio.html</loc>
+    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
   </url>
-  
   <url>
-    <loc>https://camillebelmin.github.io/publications/</loc>
-    <lastmod>2022-01-05T00:00:00+00:00</lastmod>
+    <loc>https://camillebelmin.github.io/contact.html</loc>
+    <lastmod>2026-04-26T00:00:00+00:00</lastmod>
   </url>
-  
   <url>
-    <loc>https://camillebelmin.github.io/authors/</loc>
-    <lastmod>2021-12-13T00:00:00+00:00</lastmod>
+    <loc>https://camillebelmin.github.io/assets/Belmin_CV.pdf</loc>
   </url>
-  
-  <url>
-    <loc>https://camillebelmin.github.io/author/camille-belmin/</loc>
-    <lastmod>2021-12-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://camillebelmin.github.io/publications/fertility_paper/</loc>
-    <lastmod>2021-12-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://camillebelmin.github.io/post/uninformed_sterilization/</loc>
-    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://camillebelmin.github.io/talk/</loc>
-    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://camillebelmin.github.io/talk/wineed-seminar/</loc>
-    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://camillebelmin.github.io/post/reproducible-paper-writing/</loc>
-    <lastmod>2020-09-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://camillebelmin.github.io/post/dhs-region-harmonization/</loc>
-    <lastmod>2019-11-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://camillebelmin.github.io/about/</loc>
-  </url>
-  
-  <url>
-    <loc>https://camillebelmin.github.io/author/camille-belmin/</loc>
-  </url>
-  
-  <url>
-    <loc>https://camillebelmin.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://camillebelmin.github.io/media/</loc>
-  </url>
-  
-  <url>
-    <loc>https://camillebelmin.github.io/publication_types/</loc>
-  </url>
-  
-  <url>
-    <loc>https://camillebelmin.github.io/tags/</loc>
-  </url>
-  
 </urlset>
