@@ -70,16 +70,81 @@
                 opacity: 1;
             }
         }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(10px);
+            }
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            color: #E6A0C4FF;
+            animation: bounce 1.5s ease-in-out infinite;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+
+            .name {
+                font-size: 40px;
+                top: 10vh;
+                left: 8vw;
+                text-align: left;
+                position: relative;
+                margin-bottom: 15vh;
+            }
+
+            .name span {
+                display: block;
+            }
+
+            .bio {
+                position: relative;
+                top: auto;
+                left: auto;
+                max-width: 85vw;
+                max-height: none;
+                font-size: 14px;
+                margin-bottom: 15vh;
+                padding: 0 8vw;
+            }
+
+            .scroll-indicator {
+                display: block;
+            }
+
+            .word {
+                position: relative;
+                display: inline-block;
+                font-size: 20px;
+                margin: 10px 15px;
+                opacity: 1;
+                animation: none;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="name">Camille Belmin</div>
+    <div class="name"><span>Camille</span><span>Belmin</span></div>
     <div class="bio">Camille Belmin is a researcher, artist, curator, and lecturer at IIASA and independently. Her work focuses on narratives and modalities of communication that shape socio-ecological transformation, as well as population-environment-gender issues. She leads Ecoslay, an independent artistic research project that explores the boundaries of climate science communication, mobilizing the language and aesthetics of popular culture to engage diverse publics with ecological concerns. In her artistic practice, she works with installation, lecture performance and text, collaborating with metabolic processes ranging from composting and fermentation to social metabolism.</div>
     <a href="ecoslay.html" class="word" id="word-ecoslay">ecoslay</a>
     <a href="assets/Belmin_CV.pdf" class="word" id="word-cv">cv</a>
     <a href="publications.html" class="word" id="word-publications">publications</a>
-    <a href="assets/Camille Belmin_portfoliosept2025_mail.pdf" class="word" id="word-portfolio">portfolio</a>
+    <a href="assets/Camille Belmin_portfoliosept2025.pdf" class="word" id="word-portfolio">portfolio</a>
     <a href="contact.html" class="word" id="word-contact">contact</a>
+    <div class="scroll-indicator">↓</div>
 
     <script>
         const words = [
@@ -134,6 +199,10 @@
         }
 
         function assignPositions() {
+            if (window.innerWidth <= 768) {
+                return;
+            }
+
             const maxAttempts = 1000;
 
             for (let i = 0; i < words.length; i++) {
