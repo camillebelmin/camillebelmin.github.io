@@ -20,11 +20,79 @@
 
         .word {
             position: fixed;
+            left: 15vw;
+            top: 40vh;
             font-size: 48px;
             color: #D8A499FF;
             text-decoration: none;
             opacity: 0;
             animation: fadeIn 1s ease-out forwards;
+        }
+
+        .content {
+            position: fixed;
+            left: 45vw;
+            top: 20vh;
+            max-width: 50vw;
+        }
+
+        .icon-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 20px;
+            text-decoration: none;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-link:hover {
+            transform: scale(1.15);
+        }
+
+        .icon-insta {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888, #8a3ab9);
+            box-shadow: 0 4px 15px rgba(188, 24, 136, 0.3);
+        }
+
+        .icon-insta svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        .icon-email {
+            background-color: #E6A0C4FF;
+            box-shadow: 0 4px 15px rgba(230, 160, 196, 0.3);
+        }
+
+        .icon-email svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+
+        .label {
+            display: block;
+            font-family: Georgia, serif;
+            font-size: 12px;
+            color: #073763;
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        .icon-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         @keyframes fadeIn {
@@ -50,7 +118,26 @@
     </style>
 </head>
 <body>
-    <a href="index.html" class="word" style="left: 30vw; top: 40vh;">CONTACT</a>
+    <a href="index.html" class="word">CONTACT</a>
+
+    <div class="content">
+        <div class="icon-group">
+            <a href="https://www.instagram.com/myrtillus_vaccinia/" class="icon-link icon-insta" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.671.014-4.947.072-2.98.182-4.395 1.862-4.578 4.578-.059 1.276-.073 1.689-.073 4.947 0 3.259.014 3.668.072 4.947.182 2.98 1.862 4.395 4.578 4.578 1.276.058 1.689.072 4.947.072 3.259 0 3.671-.014 4.947-.072 2.98-.182 4.395-1.862 4.578-4.578.058-1.276.072-1.689.072-4.947 0-3.259-.014-3.667-.072-4.947-.182-2.98-1.862-4.395-4.578-4.578-1.276-.058-1.689-.072-4.947-.072zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.014 2.705.14 7.525c-.06 1.276-.072 1.686-.072 4.948 0 3.259.014 3.668.072 4.948.197 4.96 1.852 7.951 6.878 8.015 1.275.058 1.686.072 4.947.072 3.26 0 3.668-.014 4.948-.072 4.96-.197 7.951-1.852 8.015-6.878.058-1.276.072-1.689.072-4.948 0-3.259-.014-3.667-.072-4.947-.197-4.96-1.852-7.951-6.878-8.015-1.276-.058-1.689-.072-4.948-.072zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/>
+                </svg>
+            </a>
+            <div class="icon-item">
+                <a href="mailto:camille.belmin@posteo.net" class="icon-link icon-email">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                </a>
+                <span class="label">@myrtillus_vaccinia</span>
+            </div>
+        </div>
+    </div>
+
     <a href="index.html" class="back">← back</a>
 </body>
 </html>
