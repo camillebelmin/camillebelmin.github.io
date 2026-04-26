@@ -19,6 +19,31 @@
             font-family: Impact, sans-serif;
         }
 
+        .name {
+            position: fixed;
+            top: 2vh;
+            left: 3vw;
+            font-size: 72px;
+            color: #E6A0C4FF;
+        }
+
+        .bio {
+            position: fixed;
+            top: 105px;
+            left: 3vw;
+            max-width: 45vw;
+            max-height: 45vh;
+            font-size: 16px;
+            color: #FFFDD0;
+            line-height: 1.4;
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: rgba(230, 160, 196, 0.3);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+
         .word {
             position: fixed;
             font-size: 48px;
@@ -46,26 +71,46 @@
     </style>
 </head>
 <body>
+    <div class="name">Camille Belmin</div>
+    <div class="bio">Camille Belmin is a researcher, artist, curator, and lecturer at IIASA and independently. Her work focuses on narratives and modalities of communication that shape socio-ecological transformation, as well as population-environment-gender issues. She leads Ecoslay, an independent artistic research project that explores the boundaries of climate science communication, mobilizing the language and aesthetics of popular culture to engage diverse publics with ecological concerns. In her artistic practice, she works with installation, lecture performance and text, collaborating with metabolic processes ranging from composting and fermentation to social metabolism.</div>
     <a href="art.html" class="word" id="word-art">art</a>
     <a href="research.html" class="word" id="word-research">research</a>
     <a href="curation.html" class="word" id="word-curation">curation</a>
     <a href="publications.html" class="word" id="word-publications">publications</a>
+    <a href="ecoslay.html" class="word" id="word-ecoslay">ecoslay</a>
 
     <script>
         const words = [
             { id: 'word-art', href: 'art.html' },
             { id: 'word-research', href: 'research.html' },
             { id: 'word-curation', href: 'curation.html' },
-            { id: 'word-publications', href: 'publications.html' }
+            { id: 'word-publications', href: 'publications.html' },
+            { id: 'word-ecoslay', href: 'ecoslay.html' }
         ];
 
-        const MIN_DISTANCE_VW = 30;
+        const MIN_DISTANCE_VW = 25;
+        const EXCLUDED_REGION = { minX: 0, maxX: 48, minY: 0, maxY: 58 };
+        const ZONES = [
+            { minX: 5, maxX: 35, minY: 55, maxY: 88 },  // bottom-left
+            { minX: 50, maxX: 80, minY: 55, maxY: 88 },  // bottom-right
+            { minX: 50, maxX: 80, minY: 10, maxY: 50 }, // top-right
+            { minX: 5, maxX: 40, minY: 55, maxY: 88 },  // bottom-left alt
+            { minX: 50, maxX: 80, minY: 55, maxY: 88 }  // bottom-right alt
+        ];
 
-        function getRandomPosition() {
+        const positions = [];
+
+        function getRandomPosition(zoneIndex) {
+            const zone = ZONES[zoneIndex];
             return {
-                x: Math.random() * 70 + 5,
-                y: Math.random() * 60 + 10
+                x: Math.random() * (zone.maxX - zone.minX) + zone.minX,
+                y: Math.random() * (zone.maxY - zone.minY) + zone.minY
             };
+        }
+
+        function isInExcludedRegion(pos) {
+            return pos.x >= EXCLUDED_REGION.minX && pos.x <= EXCLUDED_REGION.maxX &&
+                   pos.y >= EXCLUDED_REGION.minY && pos.y <= EXCLUDED_REGION.maxY;
         }
 
         function distance(pos1, pos2) {
@@ -75,6 +120,9 @@
         }
 
         function isValidPosition(newPos, positions, minDistance) {
+            if (isInExcludedRegion(newPos)) {
+                return false;
+            }
             for (const pos of positions) {
                 if (distance(newPos, pos) < minDistance) {
                     return false;
@@ -84,16 +132,17 @@
         }
 
         function assignPositions() {
-            const positions = [];
             const maxAttempts = 1000;
 
-            for (const word of words) {
+            for (let i = 0; i < words.length; i++) {
+                const word = words[i];
+                const zoneIndex = i % ZONES.length;
                 let attempts = 0;
                 let placed = false;
 
                 while (!placed && attempts < maxAttempts) {
-                    const newPos = getRandomPosition();
-                    if (isValidPosition(newPos, positions, MIN_DISTANCE_VW)) {
+                    const newPos = getRandomPosition(zoneIndex);
+                    if (isValidPosition(newPos, i === 0 ? [] : positions.slice(0, i), MIN_DISTANCE_VW)) {
                         positions.push(newPos);
                         const element = document.getElementById(word.id);
                         element.style.left = newPos.x + 'vw';
@@ -105,7 +154,7 @@
                 }
 
                 if (!placed) {
-                    const newPos = getRandomPosition();
+                    const newPos = getRandomPosition(zoneIndex);
                     const element = document.getElementById(word.id);
                     element.style.left = newPos.x + 'vw';
                     element.style.top = newPos.y + 'vh';

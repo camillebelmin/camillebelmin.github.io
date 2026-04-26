@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecoslay - Camille Belmin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #C6CDF7FF;
+            min-height: 100vh;
+            padding: 5vh 5vw;
+            font-family: Impact, sans-serif;
+        }
+
+        .word {
+            position: fixed;
+            font-size: 48px;
+            color: #D8A499FF;
+            text-decoration: none;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .back {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            font-size: 24px;
+            color: #D8A499FF;
+            text-decoration: none;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="word" style="left: 30vw; top: 40vh;">ECOSLAY</a>
+    <a href="index.html" class="back">← back</a>
+</body>
+</html>
