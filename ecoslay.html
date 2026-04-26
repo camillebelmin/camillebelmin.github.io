@@ -18,22 +18,41 @@
             font-family: Impact, sans-serif;
         }
 
-        .word {
-            position: fixed;
+        h1 {
             font-size: 48px;
-            color: #D8A499FF;
-            text-decoration: none;
-            opacity: 0;
-            animation: fadeIn 1s ease-out forwards;
+            color: #E6A0C4FF;
+            margin-bottom: 30px;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        .intro {
+            font-family: Georgia, serif;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #073763;
+            max-width: 600px;
+            margin-bottom: 25px;
+        }
+
+        .intro p {
+            margin-bottom: 15px;
+        }
+
+        .book-cover {
+            max-width: 400px;
+            margin: 30px 0;
+        }
+
+        .book-cover img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .book-info {
+            font-family: Georgia, serif;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #073763;
+            max-width: 600px;
         }
 
         .back {
@@ -47,10 +66,37 @@
             animation: fadeIn 1s ease-out forwards;
             animation-delay: 0.5s;
         }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
-    <a href="index.html" class="word" style="left: 30vw; top: 40vh;">ECOSLAY</a>
+    <h1>Ecoslay</h1>
+
+    <div class="intro">
+        <p>Ecoslay is both an organisation and a cultural movement operating at the intersection of art, science communication, and cultural practice. We use the language and tactics of pop culture to make ecosocial issues engaging and accessible, and actionable and to spark motivation and to unite the left in the current gloomy times.</p>
+        <p>We thrive towards a collective regenerative society that protects the integrity of the working class and the non-human world.</p>
+        <p>Ecoslay observes pop-cultural phenomena and the dissemination of aesthetics, trends, and narratives, and we repurpose them to spark awareness, motivation, and collective engagement on eco-social issues.</p>
+        <p>Ecoslay is not a fixed structure, but an evolving process: an experiment, a playground, and a shared inquiry. We invite anyone interested to take part in joining us to shape and experiment with this new cultural movement.</p>
+    </div>
+
+    <div class="book-cover">
+        <img src="assets/ecoslay-cover.jpg" alt="Ecoslay: An Anthology">
+    </div>
+
+    <div class="book-info">
+        <p>In 2025, we published the book Ecoslay: an Anthology. In this first publication, eight artists, researchers, and cultural workers provide their interpretation of Ecoslay through girlhood as a cultural force for environmental action.</p>
+        <p>Ecoslay – An Anthology with contributions by Janina Weißengruber, Nari Sarmini, paraCIR & Daniel H. Pineda, Ramona Gomez, Lisa Jäger, Camille Belmin, Diana Andrei, and Alokin Jaywalker.</p>
+        <p>Edited by Camille Belmin, designed by adO/Aptive (Janina Weißengruber and Daniel H. Pineda)</p>
+    </div>
+
     <a href="index.html" class="back">← back</a>
 </body>
 </html>
