@@ -89,7 +89,7 @@
             { id: 'word-contact', href: 'contact.html' }
         ];
 
-        const MIN_DISTANCE_VW = 25;
+        const MIN_DISTANCE_VW = 20;
         const EXCLUDED_REGION = { minX: 0, maxX: 50, minY: 0, maxY: 62 };
         const ZONES = [
             { minX: 5, maxX: 32, minY: 58, maxY: 85 },  // bottom-left
@@ -156,6 +156,9 @@
 
                 if (!placed) {
                     const newPos = getRandomPosition(zoneIndex);
+                    if (isValidPosition(newPos, i === 0 ? [] : positions.slice(0, i), MIN_DISTANCE_VW)) {
+                        positions.push(newPos);
+                    }
                     const element = document.getElementById(word.id);
                     element.style.left = newPos.x + 'vw';
                     element.style.top = newPos.y + 'vh';
