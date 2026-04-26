@@ -14,16 +14,56 @@
         body {
             background-color: #C6CDF7FF;
             min-height: 100vh;
+            padding: 5vh 5vw;
             font-family: Impact, sans-serif;
         }
 
         .word {
             position: fixed;
+            left: 20vw;
+            top: 40vh;
             font-size: 48px;
             color: #D8A499FF;
             text-decoration: none;
             opacity: 0;
             animation: fadeIn 1s ease-out forwards;
+        }
+
+        .content {
+            position: fixed;
+            left: 45vw;
+            top: 8vh;
+            max-width: 50vw;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #E6A0C4FF;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #D8A499FF;
+            padding-bottom: 4px;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .pub-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pub-list li {
+            font-family: Georgia, serif;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #073763;
+            margin-bottom: 10px;
+            padding-left: 15px;
+            text-indent: -15px;
         }
 
         @keyframes fadeIn {
@@ -49,7 +89,38 @@
     </style>
 </head>
 <body>
-    <a href="index.html" class="word" style="left: 30vw; top: 40vh;">PUBLICATIONS</a>
+    <a href="index.html" class="word">PUBLICATIONS</a>
+
+    <div class="content">
+        <h2>Peer-reviewed publications</h2>
+        <ul class="pub-list">
+            <li>Belmin, C., Bez, C. S., & Soomauroo, Z. (2026). Deconstructing the ivory tower: The liminal space between margins and centers in climate research. Energy Research & Social Science, 132, 104553.</li>
+            <li>Hoffmann, R., Patange, O., Zimm, C., Pachauri, S., Belmin, C., Pelz, S., ... & Mintz-Woo, K. (2025). Subnational survey data reveal persistent gaps in living standards across 75 low and middle-income countries. Nature Communications, 16(1), 4986.</li>
+            <li>Creutzig, F., McPhearson, T., Bardhan, R., Belmin, C., Chow, W. T., Garschagen, M., ... & Ürge-Vorsatz, D. (2025). Bridging the scale between the local particular and the global universal in climate change assessments of cities. Nature Cities, 1-10.</li>
+            <li>Belmin, C. et al. (2024). The energy–population dividend: evidence from energy-specific population projections. Environmental Research Letters, 20(1), 014047.</li>
+            <li>Carr, R., Kotz, M., Pichler, P. P., Weisz, H., Belmin, C., & Wenz, L. (2024). Climate change to exacerbate the burden of water collection on women's welfare globally. Nature Climate Change, 1-7.</li>
+            <li>Lammers, K., Belmin, C., Soomauroo, Z., & Hoffmann, M. M. (2024). Empowering Women in a Climate-Changing World Through Climate-Resilient Energy Access. In Women and the Energy Sector: Gender Inequality and Sustainability in Production and Consumption (pp. 91-124). Cham: Springer International Publishing.</li>
+            <li>Belmin, C., et al. LivWell: a sub-national Dataset on the Living Conditions of Women and their Well-being for 52 Countries. Scientific Data 9, 719 (2022).</li>
+            <li>Belmin, C., et al. Fertility transition powered by women's access to electricity and modern cooking fuels. Nature Sustainability 5.3 (2022): 245-253.</li>
+            <li>Pillet, M., et al. Disentangling competitive vs. climatic drivers of tropical forest mortality. Journal of Ecology 106.3 (2018): 1165-1179.</li>
+        </ul>
+
+        <h2>Artistic research publications, as editor</h2>
+        <ul class="pub-list">
+            <li>Belmin, C. (ed.) (2025). Ecoslay: an Anthology. Vienna. Fugue-fuga-fuge.</li>
+            <li>Belmin, C. (ed.) (2025). Distant yet so close. Vienna. IIASA.</li>
+        </ul>
+
+        <h2>Other publications</h2>
+        <ul class="pub-list">
+            <li>[Master of Fine Arts Thesis] Belmin, C. (2026). Metabolic Girl.</li>
+            <li>[PhD Dissertation] Belmin, C. (2025). Household energy transition, fertility transition and women empowerment: linkages and opportunities for sustainable development. https://doi.org/10.18452/30028</li>
+            <li>Zens, G., Belmin, C., Hoffmann, R. (2025). Biased Perceptions of Energy Consumption in the European Union. SPES Working Paper no. 8.2.</li>
+            <li>[Dataset] Belmin, C., et al. (2022). LivWell: a sub-national database on the Living conditions of Women and their Well-being for 52 countries. Zenodo.</li>
+            <li>[Dataset] Belmin, C. (2019). Regional Harmonization of Demographic and Health Survey Data.</li>
+        </ul>
+    </div>
+
     <a href="index.html" class="back">← back</a>
 </body>
 </html>
