@@ -52,12 +52,13 @@
             opacity: 0;
             animation: fadeIn 1s ease-out forwards;
             cursor: pointer;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, color 0.3s ease;
             user-select: none;
         }
 
         .word:hover {
             transform: scale(1.5);
+            color: #E6A0C4FF;
         }
 
         @keyframes fadeIn {
@@ -89,13 +90,13 @@
         ];
 
         const MIN_DISTANCE_VW = 25;
-        const EXCLUDED_REGION = { minX: 0, maxX: 48, minY: 0, maxY: 58 };
+        const EXCLUDED_REGION = { minX: 0, maxX: 50, minY: 0, maxY: 62 };
         const ZONES = [
-            { minX: 5, maxX: 35, minY: 55, maxY: 88 },  // bottom-left
-            { minX: 50, maxX: 80, minY: 55, maxY: 88 },  // bottom-right
-            { minX: 50, maxX: 80, minY: 10, maxY: 50 }, // top-right
-            { minX: 5, maxX: 40, minY: 55, maxY: 88 },  // bottom-left alt
-            { minX: 50, maxX: 80, minY: 55, maxY: 88 }  // bottom-right alt
+            { minX: 5, maxX: 32, minY: 58, maxY: 85 },  // bottom-left
+            { minX: 50, maxX: 77, minY: 58, maxY: 85 },  // bottom-right
+            { minX: 50, maxX: 77, minY: 12, maxY: 48 }, // top-right
+            { minX: 5, maxX: 38, minY: 58, maxY: 85 },  // bottom-left alt
+            { minX: 50, maxX: 77, minY: 58, maxY: 85 }  // bottom-right alt
         ];
 
         const positions = [];
