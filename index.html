@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camille Belmin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #C6CDF7FF;
+            min-height: 100vh;
+            overflow: hidden;
+            padding: 5vh 5vw;
+            font-family: Impact, sans-serif;
+        }
+
+        .word {
+            position: fixed;
+            font-size: 48px;
+            color: #D8A499FF;
+            text-decoration: none;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            user-select: none;
+        }
+
+        .word:hover {
+            transform: scale(1.5);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="art.html" class="word" id="word-art">art</a>
+    <a href="research.html" class="word" id="word-research">research</a>
+    <a href="curation.html" class="word" id="word-curation">curation</a>
+    <a href="publications.html" class="word" id="word-publications">publications</a>
+
+    <script>
+        const words = [
+            { id: 'word-art', href: 'art.html' },
+            { id: 'word-research', href: 'research.html' },
+            { id: 'word-curation', href: 'curation.html' },
+            { id: 'word-publications', href: 'publications.html' }
+        ];
+
+        const MIN_DISTANCE_VW = 30;
+
+        function getRandomPosition() {
+            return {
+                x: Math.random() * 70 + 5,
+                y: Math.random() * 60 + 10
+            };
+        }
+
+        function distance(pos1, pos2) {
+            const dx = pos1.x - pos2.x;
+            const dy = pos1.y - pos2.y;
+            return Math.sqrt(dx * dx + dy * dy);
+        }
+
+        function isValidPosition(newPos, positions, minDistance) {
+            for (const pos of positions) {
+                if (distance(newPos, pos) < minDistance) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function assignPositions() {
+            const positions = [];
+            const maxAttempts = 1000;
+
+            for (const word of words) {
+                let attempts = 0;
+                let placed = false;
+
+                while (!placed && attempts < maxAttempts) {
+                    const newPos = getRandomPosition();
+                    if (isValidPosition(newPos, positions, MIN_DISTANCE_VW)) {
+                        positions.push(newPos);
+                        const element = document.getElementById(word.id);
+                        element.style.left = newPos.x + 'vw';
+                        element.style.top = newPos.y + 'vh';
+                        element.style.animationDelay = (Math.random() * 0.5) + 's';
+                        placed = true;
+                    }
+                    attempts++;
+                }
+
+                if (!placed) {
+                    const newPos = getRandomPosition();
+                    const element = document.getElementById(word.id);
+                    element.style.left = newPos.x + 'vw';
+                    element.style.top = newPos.y + 'vh';
+                    element.style.animationDelay = (Math.random() * 0.5) + 's';
+                }
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', assignPositions);
+    </script>
+</body>
+</html>
